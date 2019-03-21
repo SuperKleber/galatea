@@ -1,0 +1,35 @@
+{
+    "components":{
+        "sections":{
+            "rubros":[
+                {
+                    "title":"Iluminación inteligente",
+                    "description":"Sistemas de iluminación para edificios, señalización, luces de emegencia, etc",
+                    "button":{
+                        "textButton":"Conoce más",
+                        "typeButton": "primary"
+                    }
+
+                },
+                {
+                    "title":"Equipos de seguridad",
+                    "description":"tenemos trajes y equipos de seguridad para distintos mercados",
+                    "button":{
+                        "textButton":"Conoce más",
+                        "typeButton": "primary"
+                    }
+
+                },
+                {
+                    "title":"Medición industrial",
+                    "description":"lorem ",
+                    "button":{
+                        "textButton":"Conoce más",
+                        "typeButton": "primary"
+                    }
+
+                }
+            ]
+        }
+    }
+}
