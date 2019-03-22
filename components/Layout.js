@@ -4,7 +4,7 @@ export default class Layout extends Component {
   render() {
     const {title} = this.props
     return (
-      <div>
+      <div className="Layout">
         <Head>
                 <meta charset="utf-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -56,6 +56,9 @@ export default class Layout extends Component {
           </nav>
         </header>
           <style jsx>{`
+            .Layout{
+              background: #fff;
+            }
             .logo img{
               width: 40px;
             }

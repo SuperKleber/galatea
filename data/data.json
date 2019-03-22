@@ -1,28 +1,41 @@
 {
+    "generalInformation":{
+        "nameCompany":"Galatea SRL",
+        "nameMini":"Galatea",
+        "nameWeb": "galatea.solutions",
+        "description":"Somos una empresa que ofrece soluciones tecnològicas en diversas àreas, desde seguridad industrial hasta sistemas de iluminación inteligente",
+        "phone":"+59133462300",
+        "email":"info@galatea.ws",
+        "address":"Galatea SRL Av. Paraguá #3265 Entre tercer y cuarto anillo Santa Cruz - Bolivia",
+        "domainWeb":"galatea.solutions"
+    },
     "components":{
         "sections":{
             "rubros":[
                 {
+                    "imgUrl":"../static/images/ilumination.jpg",
                     "title":"Iluminación inteligente",
                     "description":"Sistemas de iluminación para edificios, señalización, luces de emegencia, etc",
                     "button":{
                         "textButton":"Conoce más",
                         "typeButton": "primary"
                     }
-
+                    
                 },
                 {
+                    "imgUrl":"../static/images/security.jpg",
                     "title":"Equipos de seguridad",
                     "description":"tenemos trajes y equipos de seguridad para distintos mercados",
                     "button":{
                         "textButton":"Conoce más",
                         "typeButton": "primary"
                     }
-
+                    
                 },
                 {
-                    "title":"Medición industrial",
-                    "description":"lorem ",
+                    "imgUrl":"../static/images/comunication.jpg",
+                    "title":"Sistemas de Comunicaciòn",
+                    "description":"Conectamos tu industria de manera interna para una mejor comunicaciòn entre los trabajadores",
                     "button":{
                         "textButton":"Conoce más",
                         "typeButton": "primary"
@@ -30,6 +43,64 @@
 
                 }
             ]
+        },
+        "offers":
+        [
+            {
+                "imgUrl":"../static/images/offers/alcoholimetro.png",
+                "title": "Alcoholìmetro",
+                "description": "Mide el acohol con el aliento",
+                "normalPrice": "1000$x50unidades",
+                "discountPrice": "800$x50unidades"
+            },
+            {
+                "imgUrl":"../static/images/offers/alcoholimetro.png",
+                "title": "Alcoholìmetro",
+                "description": "Mide el acohol con el aliento",
+                "normalPrice": "1000$x50unidades",
+                "discountPrice": "800$x50unidades"
+            },
+            {
+                "imgUrl":"../static/images/offers/alcoholimetro.png",
+                "title": "Alcoholìmetro",
+                "description": "Mide el acohol con el aliento",
+                "normalPrice": "1000$x50unidades",
+                "discountPrice": "800$x50unidades"
+            },
+            {
+                "imgUrl":"../static/images/offers/alcoholimetro.png",
+                "title": "Alcoholìmetro",
+                "description": "Mide el acohol con el aliento",
+                "normalPrice": "1000$x50unidades",
+                "discountPrice": "800$x50unidades"
+            }
+        ],
+        "footer":{
+            "followUs":{
+                "text": "Conectate a nuestras redes",
+                "socialNetworks":[
+                    {
+                        "title":"Facebook",
+                        "color": "blue"
+                    },
+                    {
+                        "title":"instagram",
+                        "color": "pink"
+                    },
+                    {
+                        "title":"Linkedin",
+                        "color": "skyblue"
+                    }
+                ]
+            },
+            "info":{
+                "columns":[
+                    {"title": "Acerca de nosotros"},
+                    {"title": "Unidades de negocio"},
+                    {"title": "Nuestra direcciòn"},
+                    {"title": "Contacto"}
+                ]
+            }
         }
     }
 }
