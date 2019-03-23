@@ -14,13 +14,13 @@ export default class Layout extends Component {
                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
               
         </Head>
-        <header className="container">
-          <a className="logo d-flex align-items-center mb-2 mt-4">
+        <header className="">
+          <a className="logo d-flex align-items-center mb-2 m-3">
             <img className="rounded-circle mt-auto mr-2" src="../static/images/isotipoGalatea.png" alt="logo"/>
             <h3 >{title ? title : "galatea"}</h3 >
           </a>
             
-          <nav className="navbar navbar-expand-lg navbar-light bg-light container">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light container-fluid">
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>

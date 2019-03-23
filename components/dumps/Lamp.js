@@ -4,21 +4,35 @@ import "../../static/styles/lamp.css"
 
 export default class Lamp extends Component {
     state={on:false}
-    Switch=()=>{
-     this.setState({
-         on: !this.state.on
-     })   
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
     }
+    
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+    handleScroll=()=>{
+        let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+        if(scroll > 100){
+            this.Switch()
+        }
+    }
+    Switch=(scroll)=>{
+        this.setState({
+            on: true
+        })   
+    }   
     render() {
         return (
             <div className="container-fluid p-0" id="lamp">
-            <button onClick={this.Switch}> Prender</button>
-                <div className="lamp">
+                <div onClick={this.Switch} className="lamp">
                     <div className="gonna-give-light"></div>
                 </div>
                 {
                     this.state.on &&
-                    <img className="edificios" src="../../static/images/edificios.jpg" alt=""/>
+                        // <img className="aparition" src="../../static/images/edificios.jpg" alt=""/>
+
+                        <p className="aparition text-center container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet iure dolore ad cum ipsum magni eaque odio ea unde delectus est corrupti, possimus quia harum aliquam? Dolorem veritatis laboriosam non.</p>
                 }
                 {
                     

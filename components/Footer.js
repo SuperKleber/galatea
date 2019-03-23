@@ -90,7 +90,8 @@ export default class Footer extends Component {
             </div>
             <style jsx>{`
                 .FollowUs{
-                    background: #6351ce;
+                    background: #59bb45;
+                    color: rgba(255,255,255,.6);
                 }
                 .Contact{
                     
