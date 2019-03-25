@@ -8,7 +8,7 @@ import Lamp from '../components/dumps/Lamp';
 export class index extends Component {
   render() {
     return (
-      <Layout title="galatea.solutions">
+      <Layout active="index" title="galatea.solutions">
         <Lamp></Lamp>
         <Sections data={data.components.sections}></Sections>
         <Offers data={data.components.offers}></Offers>

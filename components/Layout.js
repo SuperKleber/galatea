@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Head from "next/head"
 export default class Layout extends Component {
   render() {
-    const {title} = this.props
+    const {title, active} = this.props
     return (
       <div className="Layout">
         <Head>
@@ -15,7 +15,7 @@ export default class Layout extends Component {
               
         </Head>
         <header className="">
-          <a className="logo d-flex align-items-center mb-2 m-3">
+          <a href="index" className="logo d-flex align-items-center mb-2 m-3">
             <img className="rounded-circle mt-auto mr-2" src="../static/images/isotipoGalatea.png" alt="logo"/>
             <h3 >{title ? title : "galatea"}</h3 >
           </a>
@@ -31,7 +31,7 @@ export default class Layout extends Component {
                   <a className="nav-link" href="#">Mercados y sectores<span className="sr-only">(current)</span></a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">productos y servicios</a>
+                  <a className={`nav-link ${active=="products" && "active"}`} href="products">productos y servicios</a>
                 </li>
                 <li className="nav-item dropdown">
                   <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

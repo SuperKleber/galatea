@@ -101,6 +101,89 @@
                     {"title": "Contacto"}
                 ]
             }
+        },
+        "products":{
+            "list":[
+                {
+                    "category": "Alcohol",
+                    "description": "Test de alcohol de varios modelos importados de Drager",
+                    "products": [
+                        {
+                            "imgUrl": "../static/images/products/alcohol/drager_alcotest6820.jpg",
+                            "title": "Drager Alcotest6820"
+                        },
+                        {
+                            "imgUrl": "../static/images/products/alcohol/drager_alcotest7510.jpg",
+                            "title": "drager_alcotest7510"
+                        },
+                        {
+                            "imgUrl": "../static/images/products/alcohol/drager_alcotest9510.jpg",
+                            "title": "drager_alcotest9510"
+                        },
+                        {
+                            "imgUrl": "../static/images/products/alcohol/drager_interlock7000.jpg",
+                            "title": "drager_interlock7000"
+                        }
+                    ]
+                },
+                {
+                    "category": "Equipos respiratorios autocontenidos",
+                    "products": [
+                        {
+                            "imgUrl": "../static/images/products/equipos_respiratorios_autocontenidos/drager_pss4000.jpg",
+                            "title": "Drager pss4000"
+                        },
+                        {
+                            "imgUrl": "../static/images/products/equipos_respiratorios_autocontenidos/drager_pss5000.jpg",
+                            "title": "drager pss5000"
+                        },
+                        {
+                            "imgUrl": "../static/images/products/equipos_respiratorios_autocontenidos/drager_pss7000.jpg",
+                            "title": "drager pss7000"
+                        }
+                    ]
+                },
+                {
+                    "category": "Sistemas de comunicación",
+                    "description": "comunicación"
+                },
+                {
+                    "category": "seguridad industrial",
+                    "description": "tenemos trajes y equipos de seguridad para distintos mercados"
+                },
+                {
+                    "category": "Iluminación inteligente",
+                    "description": "Sistemas de iluminación para edificios, señalización, luces de emegencia, etc"
+                },
+                {
+                    "category": "Sistemas de comunicación",
+                    "description": "comunicación"
+                },
+                {
+                    "category": "seguridad industrial",
+                    "description": "tenemos trajes y equipos de seguridad para distintos mercados"
+                },
+                {
+                    "category": "Iluminación inteligente",
+                    "description": "Sistemas de iluminación para edificios, señalización, luces de emegencia, etc"
+                },
+                {
+                    "category": "Sistemas de comunicación",
+                    "description": "comunicación"
+                },
+                {
+                    "category": "seguridad industrial",
+                    "description": "tenemos trajes y equipos de seguridad para distintos mercados"
+                },
+                {
+                    "category": "Iluminación inteligente",
+                    "description": "Sistemas de iluminación para edificios, señalización, luces de emegencia, etc"
+                },
+                {
+                    "category": "Sistemas de comunicación",
+                    "description": "comunicación"
+                }
+            ]
         }
     }
 }
