@@ -1,24 +1,24 @@
 import React, { Component } from 'react'
 import Card from "./dumps/Card"
+import Responsive from './dumps/Responsive';
+import Product from './dumps/Product';
 export default class Products extends Component {
-    state={responsive:false}
+
   render() {
     const {category, description, products} = this.props.data
     return (
       <div className="Products container-fluid">
         {/* {category && <h3 className="row bg-primary text-white p-2 rounded">{category}</h3>} */}
-        {description && <h5 className="row text-secondary p-3 rounded">{description}</h5>}
+        {/* {description && <h5 className="row text-secondary p-3 rounded">{description}</h5>} */}
         {
             products &&
-            <div className="row">
+            <div className="row justify-content-center">
                 {
                     products.map((element)=>{
                         return(
-                            <div className="product m-2">
-                                <Card data={element}></Card>
-
-                            </div>
-
+                            <Product 
+                            data={element}>
+                            </Product>
                         )
                     })
                 }
@@ -32,6 +32,7 @@ export default class Products extends Component {
             .product:hover{
                 transform: scale(1.05)
             }
+            
         `}</style>
       </div>
     )

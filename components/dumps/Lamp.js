@@ -32,7 +32,7 @@ export default class Lamp extends Component {
                     this.state.on &&
                         // <img className="aparition" src="../../static/images/edificios.jpg" alt=""/>
 
-                        <p className="aparition text-center container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet iure dolore ad cum ipsum magni eaque odio ea unde delectus est corrupti, possimus quia harum aliquam? Dolorem veritatis laboriosam non.</p>
+                        <p className="aparition text-center container">{this.props.description}</p>
                 }
                 {
                     

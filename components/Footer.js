@@ -14,7 +14,7 @@ export default class Footer extends Component {
   render() {
     const {generalInformation, data}=this.props
     return (
-        <footer className="page-footer font-small unique-color-dark">
+        <footer className="page-footer font-small unique-color-dark mt-4" id="footer">
 
             <div className="FollowUs">
                 <div className="container">

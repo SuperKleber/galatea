@@ -3,7 +3,7 @@
         "nameCompany":"Galatea SRL",
         "nameMini":"Galatea",
         "nameWeb": "galatea.solutions",
-        "description":"Somos una empresa que ofrece soluciones tecnològicas en diversas àreas, desde seguridad industrial hasta sistemas de iluminación inteligente",
+        "description":"Somos una empresa que ofrece soluciones tecnológicas en diversas áreas, desde seguridad industrial hasta sistemas de iluminación inteligente",
         "phone":"+59133462300",
         "email":"info@galatea.ws",
         "address":"Galatea SRL Av. Paraguá #3265 Entre tercer y cuarto anillo Santa Cruz - Bolivia",
@@ -77,7 +77,7 @@
         ],
         "footer":{
             "followUs":{
-                "text": "Conectate a nuestras redes",
+                "text": "Sè parte de nuestros satisfechos clientes",
                 "socialNetworks":[
                     {
                         "title":"Facebook",
@@ -102,88 +102,374 @@
                 ]
             }
         },
-        "products":{
-            "list":[
+        "mercados":{
+            "industries":[
+                "Aceiteras",
+                "Gaseosas y cervezas",
+                "Azucareros",
+                "Lácteos",
+                "Papeleras",
+                "Textiles",
+                "Fábrica de baterías",
+                "Refinerías",
+                "Almacén de hidrocarburos",
+                "Comercizalización de Gas",
+                "Transporte de hidrocarburos",
+                "Distrubición de energía",
+                "Cooperativas de AGUA",
+                "Petroleras",
+                "Minería",
+                "Subterranea",
+                "A cielo abierta"
+            ],
+            "clientes": [
                 {
-                    "category": "Alcohol",
-                    "description": "Test de alcohol de varios modelos importados de Drager",
-                    "products": [
-                        {
-                            "imgUrl": "../static/images/products/alcohol/drager_alcotest6820.jpg",
-                            "title": "Drager Alcotest6820"
-                        },
-                        {
-                            "imgUrl": "../static/images/products/alcohol/drager_alcotest7510.jpg",
-                            "title": "drager_alcotest7510"
-                        },
-                        {
-                            "imgUrl": "../static/images/products/alcohol/drager_alcotest9510.jpg",
-                            "title": "drager_alcotest9510"
-                        },
-                        {
-                            "imgUrl": "../static/images/products/alcohol/drager_interlock7000.jpg",
-                            "title": "drager_interlock7000"
-                        }
-                    ]
+                    "logoImgUrl":"../static/images/logos_clientes/aguai.png",
+                    "enterpriseName":"Aguaí"
                 },
                 {
-                    "category": "Equipos respiratorios autocontenidos",
-                    "products": [
-                        {
-                            "imgUrl": "../static/images/products/equipos_respiratorios_autocontenidos/drager_pss4000.jpg",
-                            "title": "Drager pss4000"
-                        },
-                        {
-                            "imgUrl": "../static/images/products/equipos_respiratorios_autocontenidos/drager_pss5000.jpg",
-                            "title": "drager pss5000"
-                        },
-                        {
-                            "imgUrl": "../static/images/products/equipos_respiratorios_autocontenidos/drager_pss7000.jpg",
-                            "title": "drager pss7000"
-                        }
-                    ]
+                    "logoImgUrl":"../static/images/logos_clientes/cre.png",
+                    "enterpriseName":"CRE"
                 },
                 {
-                    "category": "Sistemas de comunicación",
-                    "description": "comunicación"
+                    "logoImgUrl":"../static/images/logos_clientes/fino.png",
+                    "enterpriseName":"Aceites FINO"
                 },
                 {
-                    "category": "seguridad industrial",
-                    "description": "tenemos trajes y equipos de seguridad para distintos mercados"
+                    "logoImgUrl":"../static/images/logos_clientes/guabira.png",
+                    "enterpriseName":"Guabirá"
                 },
                 {
-                    "category": "Iluminación inteligente",
-                    "description": "Sistemas de iluminación para edificios, señalización, luces de emegencia, etc"
+                    "logoImgUrl":"../static/images/logos_clientes/ingenio_guabira.png",
+                    "enterpriseName":"Ingenio azucarero Guabirá"
                 },
                 {
-                    "category": "Sistemas de comunicación",
-                    "description": "comunicación"
+                    "logoImgUrl":"../static/images/logos_clientes/mineria_san_cristobal.png",
+                    "enterpriseName":"Minería San Cristobal"
                 },
                 {
-                    "category": "seguridad industrial",
-                    "description": "tenemos trajes y equipos de seguridad para distintos mercados"
+                    "logoImgUrl":"../static/images/logos_clientes/panamerican.png",
+                    "enterpriseName":"Pan American"
                 },
                 {
-                    "category": "Iluminación inteligente",
-                    "description": "Sistemas de iluminación para edificios, señalización, luces de emegencia, etc"
+                    "logoImgUrl":"../static/images/logos_clientes/petrobras.png",
+                    "enterpriseName":"Petrobras"
                 },
                 {
-                    "category": "Sistemas de comunicación",
-                    "description": "comunicación"
+                    "logoImgUrl":"../static/images/logos_clientes/repsol.png",
+                    "enterpriseName":"REPSOL"
                 },
                 {
-                    "category": "seguridad industrial",
-                    "description": "tenemos trajes y equipos de seguridad para distintos mercados"
+                    "logoImgUrl":"../static/images/logos_clientes/total.png",
+                    "enterpriseName":"Total"
                 },
                 {
-                    "category": "Iluminación inteligente",
-                    "description": "Sistemas de iluminación para edificios, señalización, luces de emegencia, etc"
-                },
-                {
-                    "category": "Sistemas de comunicación",
-                    "description": "comunicación"
+                    "logoImgUrl":"../static/images/logos_clientes/ypfb_refinacion.png",
+                    "enterpriseName":"YPFB refinación S.A"
                 }
+                
             ]
-        }
+
+        },
+        "sectors":[
+            {
+                "title":"Seguridad",
+                "description":"",
+                "list":[
+                    {
+                        "category": "Alcohol",
+                        "description": "Test de alcohol de varios modelos importados de Drager",
+                        "products": [
+                            {
+                                "imgUrl": "../static/images/products/alcohol/drager_alcotest6820.jpg",
+                                "title": "Drager Alcotest6820"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/alcohol/drager_alcotest7510.jpg",
+                                "title": "drager_alcotest7510"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/alcohol/drager_alcotest9510.jpg",
+                                "title": "drager_alcotest9510"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/alcohol/drager_interlock7000.jpg",
+                                "title": "drager_interlock7000"
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Equipos respiratorios autocontenidos",
+                        "products": [
+                            {
+                                "imgUrl": "../static/images/products/equipos_respiratorios_autocontenidos/drager_pss4000.jpg",
+                                "title": "Drager pss4000"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/equipos_respiratorios_autocontenidos/drager_pss5000.jpg",
+                                "title": "drager pss5000"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/equipos_respiratorios_autocontenidos/drager_pss7000.jpg",
+                                "title": "drager pss7000"
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Drogas",
+                        "products":[
+                            {
+                                "imgUrl": "../static/images/products/drogas/drager_drugcheck3000.jpg",
+                                "title": "drager_drugcheck3000"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/drogas/drager_drugtest5000.jpg",
+                                "title": "drager_drugtest5000"
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Equipos de escape",
+                        "products":[
+                            {
+                                "imgUrl": "../static/images/products/equipos_escape/draeger_oxy3000.jpg",
+                                "title": "draeger_oxy3000"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/equipos_escape/drager_parat4700.jpg",
+                                "title": "drager_parat4700"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/equipos_escape/drager_saver_cf.jpg",
+                                "title": "drager_saver_cf"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/equipos_escape/drager_saver_pp_sp.jpg",
+                                "title": "drager_saver_pp_sp"
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Carros de suministro",
+                        "products":[
+                            {
+                                "imgUrl": "../static/images/products/carros_suministro_aire/pas-airpack-1-img-st-3560-2003.jpg",
+                                "title": "pas-airpack-1-img-st-3560-2003"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/carros_suministro_aire/pas-airpack-2-img-st-3560-2003.jpg",
+                                "title": "pas-airpack-2-img-st-3560-2003"
+                            }
+    
+                        ]
+                    },
+                    {
+                        "category": "Rescate",
+                        "products":[
+                            {
+                                "imgUrl": "../static/images/products/rescate/drager_bg4.jpg",
+                                "title": "drager_bg4",
+                                "docs":{
+                                    "docUrl":"../static/docs/products/bg4/bg4_spare.pdf",
+                                    "docName":"Spare BG4"
+                                }
+                            },
+                            {
+                                "imgUrl": "../static/images/products/rescate/drager_ucf6000.jpg",
+                                "title": "drager_ucf6000"
+                            }
+    
+                        ]
+                    },
+                    {
+                        "category": "Detectores portátiles",
+                        "products":[
+                            {
+                                "imgUrl": "../static/images/products/detectores_portatiles/drager_airetest_alpha.jpg",
+                                "title": "drager_airetest_alpha"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/detectores_portatiles/drager_airetest5000.jpg",
+                                "title": "drager_airetest5000"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/detectores_portatiles/drager_bomba_manual_acuro.jpg",
+                                "title": "drager_bomba_manual_acuro"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/detectores_portatiles/drager_pac6000.jpg",
+                                "title": "drager_pac6000",
+                                "description": "desechable (después de 2 años), CO, H2S, SO2 y O2"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/detectores_portatiles/drager_pac6500.jpg",
+                                "title": "drager_pac6500",
+                                "description": "no desechable,  CO, H2S, SO2 y O2"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/detectores_portatiles/drager_pac8000.jpg",
+                                "title": "drager_pac8000",
+                                "description": "no desechable, para una gran  variedad de gases"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/detectores_portatiles/drager_pac8500.jpg",
+                                "title": "drager_pac8500",
+                                "description": "no desechable, H2S/CO, O2/CO, CO-H2 CP"
+                                
+                            },
+                            {
+                                "imgUrl": "../static/images/products/detectores_portatiles/drager_simultantest_co2.jpg",
+                                "title": "drager_simultantest_co2"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/detectores_portatiles/drager_x-act5500.jpg",
+                                "title": "drager_x-act5500"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/detectores_portatiles/drager_x-am2500.jpg",
+                                "title": "drager_x-am2500"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/detectores_portatiles/drager_x-am5000.jpg",
+                                "title": "drager_x-am5000",
+                                "description":"4 sensores y medir hasta 5 gases"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/detectores_portatiles/drager_x-am5600.jpg",
+                                "title": "drager_x-am5600"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/detectores_portatiles/drager_x-am8000.jpg",
+                                "title": "drager_x-am8000",
+                                "description":"medir hasta 7 gases"
+                            },
+                            {
+                                "imgUrl": "../static/images/products/detectores_portatiles/drager_x-zone5500.jpg",
+                                "title": "drager_x-zone5500",
+                                "description": "monitoreo de área"
+                            }
+    
+                        ]
+                    }
+                ]
+            },
+            {
+                "title":"Iluminación",
+                "description":"",
+                "list":[
+                    {
+                        "category": "Iluminación industrial",
+                        "description": "",
+                        "products": [
+                            {
+                                "imgUrl": "",
+                                "title": "Reflectores para Exterior e Interior"
+                            },
+                            {
+                                "imgUrl": "",
+                                "title": "Fluorescentes"
+                            },
+                            {
+                                "imgUrl": "",
+                                "title": "Senalizacion  de Emergencia"
+                            },
+                            {
+                                "imgUrl": "",
+                                "title": "Iluminacion Led"
+                            },
+                            {
+                                "imgUrl": "",
+                                "title": "ILUMINACION LED P areas peligrosas"
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Iluminación pública y comercial",
+                        "products": [
+                            {
+                                "imgUrl": "",
+                                "title": "Iluminacion LED"
+                            },
+                            {
+                                "imgUrl": "",
+                                "title": "Fluorecentes"
+                            },
+                            {
+                                "imgUrl": "",
+                                "title": "Bulbos"
+                            },
+                            {
+                                "imgUrl": "",
+                                "title": "Letreros"
+                            },
+                            {
+                                "imgUrl": "",
+                                "title": "Tubos"
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Controles de iluminación",
+                        "products":[
+                            {
+                                "imgUrl": "",
+                                "title": "Tableros"
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Productos Eléctricos para Áreas Normales, Clasificadas y Peligrosas",
+                        "products":[
+                            {
+                                "imgUrl": "",
+                                "title": "Luminarias "
+                            },
+                            {
+                                "imgUrl": "",
+                                "title": "Accesorios para instalaciones eléctricas "
+                            },
+                            {
+                                "imgUrl": "",
+                                "title": "Tableros"
+                            },
+                            {
+                                "imgUrl": "",
+                                "title": "Clavijas y Receptaculos"
+                            },
+                            {
+                                "imgUrl": "",
+                                "title": "Controles"
+                            },
+                            {
+                                "imgUrl": "",
+                                "title": "Cajas"
+                            }
+                        ]
+                    },
+                    {
+                        "category": "Iluminación Solar y eólica",
+                        "products":[
+                            {
+                                "imgUrl": "",
+                                "title": "Paneles solares"
+                            },
+                            {
+                                "imgUrl": "",
+                                "title": "Iluminación solar"
+                            },
+                            {
+                                "imgUrl": "",
+                                "title": "Iluminación híbrida"
+                            },
+                            {
+                                "imgUrl": "",
+                                "title": "Baterias"
+                            }
+    
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 }
