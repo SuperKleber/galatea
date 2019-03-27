@@ -15,31 +15,19 @@
                 {
                     "imgUrl":"../static/images/ilumination.jpg",
                     "title":"Iluminación inteligente",
-                    "description":"Sistemas de iluminación para edificios, señalización, luces de emegencia, etc",
-                    "button":{
-                        "textButton":"Conoce más",
-                        "typeButton": "primary"
-                    }
+                    "description":"Sistemas de iluminación para edificios, señalización, luces de emegencia, etc"
                     
                 },
                 {
                     "imgUrl":"../static/images/security.jpg",
                     "title":"Equipos de seguridad",
-                    "description":"tenemos trajes y equipos de seguridad para distintos mercados",
-                    "button":{
-                        "textButton":"Conoce más",
-                        "typeButton": "primary"
-                    }
+                    "description":"tenemos trajes y equipos de seguridad para distintos mercados"
                     
                 },
                 {
                     "imgUrl":"../static/images/comunication.jpg",
                     "title":"Sistemas de Comunicaciòn",
-                    "description":"Conectamos tu industria de manera interna para una mejor comunicaciòn entre los trabajadores",
-                    "button":{
-                        "textButton":"Conoce más",
-                        "typeButton": "primary"
-                    }
+                    "description":"Conectamos tu industria de manera interna para una mejor comunicaciòn entre los trabajadores"
 
                 }
             ]

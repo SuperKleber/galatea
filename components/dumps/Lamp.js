@@ -36,16 +36,20 @@ export default class Lamp extends Component {
                 }
                 {
                     
-                    this.state.on &&
-                    <style jsx>{`
-                       
-                        .lamp:before {
-                            background:rgba(255,255,255,1);
-                            box-shadow:0px 2px 10px rgba(255,255,255,0.8),
-                                    0px 5px 50px rgba(255,255,255,0.8),
-                                    0px 8px 80px rgba(255,255,255,0.6),
-                                    0px 8px 120px rgba(255,255,255,0.6);
-                        }
+                    // this.state.on &&
+                    // <style jsx>{`
+                    // .lamp:before {
+                    //     background:rgba(255,255,255,1);
+
+                    //     box-shadow:0px 2px 10px rgba(255,255,255,0.8),
+                    //     0px 5px 50px rgba(255,255,255,0.8),
+                    //                 0px 8px 80px rgba(255,255,255,0.6),
+                    //                 0px 8px 120px rgba(255,255,255,0.6);
+                    //     }
+                    // `}</style>
+                    <style global jsx>{`
+                        #lamp{backgroud:url("../../static/images/background.jpg")}
+                    
                     `}</style>
                 }
             </div>

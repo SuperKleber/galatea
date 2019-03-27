@@ -20,9 +20,13 @@ export default class Layout extends Component {
         {this.props.children}
         <Footer data={dataComponents.footer} generalInformation={generalInformation}></Footer>
         <style global jsx>{`
+        
           body{
             width:100vw;
             overflow-x: hidden;
+            background: url("../static/images/background.jpg");
+            background-size: 100%;
+            background-attachment: fixed;
           }
         `}</style>
       </div>

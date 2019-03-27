@@ -40,8 +40,8 @@ export default function Card(props) {
         </div>
         <div className="col-8">
           <div className="card-body">
-            { title&& <h5 className="card-title">{title}</h5>}
-            { description && <p className="card-text">{description}</p>}
+            { title && <h5 className="card-title m-0">{title} </h5>}
+            { description && <p className="card-tex mt-2">{description}</p>}
             { button && <a href="#" className={`btn btn-${button.typeButton.toLowerCase()}`}>{button.textButton}</a> }
             {props.children}
           </div>

@@ -5,6 +5,7 @@ import data from "../data/data.json"
 import Footer from '../components/Footer';
 import Offers from '../components/Offers';
 import Lamp from '../components/dumps/Lamp';
+import Carousel from "../components/Carousel"
 export class index extends Component {
   render() {
     return (
@@ -14,6 +15,7 @@ export class index extends Component {
       dataComponents={data.components}
       generalInformation={data.generalInformation}>
         <Lamp description={data.generalInformation.description}></Lamp>
+        {/* <Carousel></Carousel> */}
         <Sections data={data.components.sections}></Sections>
         {/* <Offers data={data.components.offers}></Offers> */}
       </Layout>

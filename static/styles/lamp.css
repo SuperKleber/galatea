@@ -12,7 +12,10 @@
   height: 80vh;
   overflow:hidden;
   /* background:#1c2331 */
-  background:#020f1f;
+  /* background:#020f1f; */
+  /* background-image:url("../images/background.jpg"); */
+  background-size: 100%;
+  background-attachment: fixed;
 }
 @media screen and (max-width: 800px){
   #lamp{height: 95vh;}
