@@ -6,7 +6,7 @@
         "description":"Somos una empresa que ofrece soluciones tecnológicas en diversas áreas, desde seguridad industrial hasta sistemas de iluminación inteligente",
         "phone":"+59133462300",
         "email":"info@galatea.ws",
-        "address":"Galatea SRL Av. Paraguá #3265 Entre tercer y cuarto anillo Santa Cruz - Bolivia",
+        "address":"Galatea SRL / Av. Paraguá #3265 Entre tercer y cuarto anillo / Santa Cruz - Bolivia",
         "domainWeb":"galatea.solutions"
     },
     "components":{
@@ -65,7 +65,7 @@
         ],
         "footer":{
             "followUs":{
-                "text": "Sè parte de nuestros satisfechos clientes",
+                "text": "Cómo ponerse en contacto con nosotros",
                 "socialNetworks":[
                     {
                         "title":"Facebook",
@@ -170,7 +170,11 @@
                         "products": [
                             {
                                 "imgUrl": "../static/images/products/alcohol/drager_alcotest6820.jpg",
-                                "title": "Drager Alcotest6820"
+                                "title": "Drager Alcotest6820",
+                                "doc":{
+                                    "docUrl":  "../static/docs/alcotest_6820_es.pdf",
+                                    "docName": "Alcotest 6820"
+                                }
                             },
                             {
                                 "imgUrl": "../static/images/products/alcohol/drager_alcotest7510.jpg",
@@ -182,7 +186,11 @@
                             },
                             {
                                 "imgUrl": "../static/images/products/alcohol/drager_interlock7000.jpg",
-                                "title": "drager_interlock7000"
+                                "title": "drager_interlock7000",
+                                "doc":{
+                                    "docUrl":"../static/docs/informacion_de_producto_Interlock_7000.pdf",
+                                    "docName":"informacion_de_producto_Interlock_7000"
+                                }
                             }
                         ]
                     },
@@ -195,7 +203,11 @@
                             },
                             {
                                 "imgUrl": "../static/images/products/equipos_respiratorios_autocontenidos/drager_pss5000.jpg",
-                                "title": "drager pss5000"
+                                "title": "drager pss5000",
+                                "doc":{
+                                    "docUrl":"../static/docs/informacion_de_producto_pss5000.pdf",
+                                    "docName":"informacion_de_producto_pss5000"
+                                }
                             },
                             {
                                 "imgUrl": "../static/images/products/equipos_respiratorios_autocontenidos/drager_pss7000.jpg",
@@ -212,7 +224,11 @@
                             },
                             {
                                 "imgUrl": "../static/images/products/drogas/drager_drugtest5000.jpg",
-                                "title": "drager_drugtest5000"
+                                "title": "drager_drugtest5000",
+                                "doc":{
+                                    "docUrl":"../static/docs/drugtest5000.pdf",
+                                    "docName":"drugtest5000"
+                                }
                             }
                         ]
                     },
@@ -229,11 +245,19 @@
                             },
                             {
                                 "imgUrl": "../static/images/products/equipos_escape/drager_saver_cf.jpg",
-                                "title": "drager_saver_cf"
+                                "title": "drager_saver_cf",
+                                "doc":{
+                                    "docUrl":"../static/docs/Informacion_de_producto_saver_cf.pdf",
+                                    "docName":"Informacion_de_producto_saver_cf"
+                                }
                             },
                             {
                                 "imgUrl": "../static/images/products/equipos_escape/drager_saver_pp_sp.jpg",
-                                "title": "drager_saver_pp_sp"
+                                "title": "drager_saver_pp_sp",
+                                "doc":{
+                                    "docUrl":"../static/docs/Informacion_de_producto_saver_pp.pdf",
+                                    "docName":"Informacion_de_producto_saver_pp"
+                                }
                             }
                         ]
                     },
@@ -242,7 +266,11 @@
                         "products":[
                             {
                                 "imgUrl": "../static/images/products/carros_suministro_aire/pas-airpack-1-img-st-3560-2003.jpg",
-                                "title": "pas-airpack-1-img-st-3560-2003"
+                                "title": "pas-airpack-1-img-st-3560-2003",
+                                "doc":{
+                                    "docUrl":"../static/docs/drager_pas_airpack1.pdf",
+                                    "docName":"drager_pas_airpack1"
+                                }
                             },
                             {
                                 "imgUrl": "../static/images/products/carros_suministro_aire/pas-airpack-2-img-st-3560-2003.jpg",
@@ -257,7 +285,7 @@
                             {
                                 "imgUrl": "../static/images/products/rescate/drager_bg4.jpg",
                                 "title": "drager_bg4",
-                                "docs":{
+                                "doc":{
                                     "docUrl":"../static/docs/products/bg4/bg4_spare.pdf",
                                     "docName":"Spare BG4"
                                 }
@@ -273,12 +301,16 @@
                         "category": "Detectores portátiles",
                         "products":[
                             {
-                                "imgUrl": "../static/images/products/detectores_portatiles/drager_airetest_alpha.jpg",
-                                "title": "drager_airetest_alpha"
+                                "imgUrl": "../static/images/products/detectores_portatiles/drager_aerotest_alpha.jpg",
+                                "title": "drager_aerotest_alpha",
+                                "doc":{
+                                    "docUrl":"../static/docs/aerotest_alpha_es.pdf",
+                                    "docName":"aerotest_alpha_es"
+                                }
                             },
                             {
-                                "imgUrl": "../static/images/products/detectores_portatiles/drager_airetest5000.jpg",
-                                "title": "drager_airetest5000"
+                                "imgUrl": "../static/images/products/detectores_portatiles/drager_aerotest5000.jpg",
+                                "title": "drager_aerotest5000"
                             },
                             {
                                 "imgUrl": "../static/images/products/detectores_portatiles/drager_bomba_manual_acuro.jpg",
@@ -297,7 +329,11 @@
                             {
                                 "imgUrl": "../static/images/products/detectores_portatiles/drager_pac8000.jpg",
                                 "title": "drager_pac8000",
-                                "description": "no desechable, para una gran  variedad de gases"
+                                "description": "no desechable, para una gran  variedad de gases",
+                                "doc":{
+                                    "docUrl":"../static/docs/pac8000.pdf",
+                                    "docName":"pac8000"
+                                }
                             },
                             {
                                 "imgUrl": "../static/images/products/detectores_portatiles/drager_pac8500.jpg",
@@ -315,7 +351,11 @@
                             },
                             {
                                 "imgUrl": "../static/images/products/detectores_portatiles/drager_x-am2500.jpg",
-                                "title": "drager_x-am2500"
+                                "title": "drager_x-am2500",
+                                "doc": {
+                                    "docUrl":"../static/docs/manual_tecnico_xam_2500.pdf",
+                                    "docName":"manual_tecnico_xam_2500"
+                                }
                             },
                             {
                                 "imgUrl": "../static/images/products/detectores_portatiles/drager_x-am5000.jpg",
@@ -329,12 +369,20 @@
                             {
                                 "imgUrl": "../static/images/products/detectores_portatiles/drager_x-am8000.jpg",
                                 "title": "drager_x-am8000",
-                                "description":"medir hasta 7 gases"
+                                "description":"medir hasta 7 gases",
+                                "doc":{
+                                    "docUrl":"../static/docs/xam8000.pdf",
+                                    "docName":"X-am 8000"
+                                }
                             },
                             {
                                 "imgUrl": "../static/images/products/detectores_portatiles/drager_x-zone5500.jpg",
                                 "title": "drager_x-zone5500",
-                                "description": "monitoreo de área"
+                                "description": "monitoreo de área",
+                                "doc":{
+                                    "docUrl":"../static/docs/informacion_de_producto_x-zone_5500.pdf",
+                                    "docName":"informacion_de_producto_x-zone_5500"
+                                }
                             }
     
                         ]
@@ -346,28 +394,30 @@
                 "description":"",
                 "list":[
                     {
-                        "category": "Iluminación industrial",
+                        "category": "Iluminación industrial para áreas peligrosas",
                         "description": "",
                         "products": [
                             {
-                                "imgUrl": "",
-                                "title": "Reflectores para Exterior e Interior"
-                            },
-                            {
-                                "imgUrl": "",
-                                "title": "Fluorescentes"
-                            },
-                            {
-                                "imgUrl": "",
-                                "title": "Senalizacion  de Emergencia"
-                            },
-                            {
-                                "imgUrl": "",
-                                "title": "Iluminacion Led"
-                            },
-                            {
-                                "imgUrl": "",
-                                "title": "ILUMINACION LED P areas peligrosas"
+                                "imgUrl":"../static/images/products/iluminacion/industrial.jpg",
+                                "title":"",
+                                "subList":[
+                                    {
+                                        "text":"Reflectores para Exterior e Interior",
+                                        "textSecondary":""
+                                    },
+                                    {
+                                        "text":"Senalizacion  de Emergencia",
+                                        "textSecondary":""
+                                    },
+                                    {
+                                        "text":"Iluminacion Led",
+                                        "textSecondary":""
+                                    },
+                                    {
+                                        "text":"ILUMINACION LED P areas peligrosas",
+                                        "textSecondary":""
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -375,24 +425,30 @@
                         "category": "Iluminación pública y comercial",
                         "products": [
                             {
-                                "imgUrl": "",
-                                "title": "Iluminacion LED"
-                            },
-                            {
-                                "imgUrl": "",
-                                "title": "Fluorecentes"
-                            },
-                            {
-                                "imgUrl": "",
-                                "title": "Bulbos"
-                            },
-                            {
-                                "imgUrl": "",
-                                "title": "Letreros"
-                            },
-                            {
-                                "imgUrl": "",
-                                "title": "Tubos"
+                                "imgUrl": "../static/images/products/iluminacion/publica.jpg",
+                                "title": "",
+                                "subList":[
+                                    {
+                                        "text":"Iluminación LED",
+                                        "textSecondary":""
+                                    },
+                                    {
+                                        "text":"Fluorecentes",
+                                        "textSecondary":""
+                                    },
+                                    {
+                                        "text":"Bulbos",
+                                        "textSecondary":""
+                                    },
+                                    {
+                                        "text":"Letreros",
+                                        "textSecondary":""
+                                    },
+                                    {
+                                        "text":"Tubos",
+                                        "textSecondary":""
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -400,8 +456,14 @@
                         "category": "Controles de iluminación",
                         "products":[
                             {
-                                "imgUrl": "",
-                                "title": "Tableros"
+                                "imgUrl": "../static/images/products/iluminacion/control.jpg",
+                                "title": "",
+                                "subList":[
+                                    {
+                                        "text":"Estación de control y pulsadores",
+                                        "textSecondary":""
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -410,27 +472,29 @@
                         "products":[
                             {
                                 "imgUrl": "",
-                                "title": "Luminarias "
-                            },
-                            {
-                                "imgUrl": "",
-                                "title": "Accesorios para instalaciones eléctricas "
-                            },
-                            {
-                                "imgUrl": "",
-                                "title": "Tableros"
-                            },
-                            {
-                                "imgUrl": "",
-                                "title": "Clavijas y Receptaculos"
-                            },
-                            {
-                                "imgUrl": "",
-                                "title": "Controles"
-                            },
-                            {
-                                "imgUrl": "",
-                                "title": "Cajas"
+                                "title": "",
+                                "subList":[
+                                    {
+                                        "text":"Luminarias",
+                                        "textSecondary":""
+                                    },
+                                    {
+                                        "text":"Accesorios para instalaciones eléctricas",
+                                        "textSecondary":""
+                                    },
+                                    {
+                                        "text":"Tableros",
+                                        "textSecondary":""
+                                    },
+                                    {
+                                        "text":"Controles",
+                                        "textSecondary":""
+                                    },
+                                    {
+                                        "text":"Tubos",
+                                        "textSecondary":""
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -438,20 +502,25 @@
                         "category": "Iluminación Solar y eólica",
                         "products":[
                             {
-                                "imgUrl": "",
-                                "title": "Paneles solares"
-                            },
-                            {
-                                "imgUrl": "",
-                                "title": "Iluminación solar"
-                            },
-                            {
-                                "imgUrl": "",
-                                "title": "Iluminación híbrida"
-                            },
-                            {
-                                "imgUrl": "",
-                                "title": "Baterias"
+                                "imgUrl": "../static/images/products/iluminacion/panel.jpg",
+                                "subList":[
+                                    {
+                                        "text":"Paneles solares",
+                                        "textSecondary":""
+                                    },
+                                    {
+                                        "text":"Iluminación solar",
+                                        "textSecondary":""
+                                    },
+                                    {
+                                        "text":"Iluminación híbrida",
+                                        "textSecondary":""
+                                    },
+                                    {
+                                        "text":"Baterias",
+                                        "textSecondary":""
+                                    }
+                                ]
                             }
     
                         ]

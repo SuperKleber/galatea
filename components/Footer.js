@@ -1,4 +1,10 @@
 import React, { Component } from 'react'
+import Subscribe from './dumps/Subscribe';
+
+// Este componente contiene la información de contacto de la empresa
+// PROPS:
+// "data": es la información del componente del footer
+// "generalInformation": es la información general de la empresa galatea
 
 function Column(props){
     return(
@@ -48,14 +54,18 @@ export default class Footer extends Component {
 
                 </div>
             </div>
-
+            <div className="container mt-4">
+                <h6 className="text-center">¿Te interesaría recibir noticias sobre nuevos productos y servicios?</h6>
+                <h6 className="text-center text-muted">Bríndanos tu contacto</h6>
+                <Subscribe emailOnly={true}></Subscribe>
+            </div>
             <div className="Contact container text-center text-md-left mt-5">
 
                 <div className="row mt-3">
-                    <Column title="Acerca de nosotros">
+                    {/* <Column title="Acerca de nosotros">
                         <p>{generalInformation.description}</p>
-                    </Column>
-                    <Column title="Unidades de Negocio">
+                    </Column> */}
+                    {/* <Column title="Unidades de Negocio">
                         <p>
                             <a href="#!">Sistemas elèctricos e iluminaciòn</a>
                         </p>
@@ -65,11 +75,16 @@ export default class Footer extends Component {
                         <p>
                             <a href="#!">Sistemas de comunicación</a>
                         </p>
-                    </Column>
+                    </Column> */}
                     <Column title="Nuestra dirección">
-                        <p>
-                        {generalInformation.address}
-                        </p>
+                        <div className="d-flex flex-column justify-content-center ">
+                            {
+                                generalInformation.address.split("/").map((element)=>{
+                                    return <p className="m-0 text-left">{element}</p>
+                                })
+
+                            }
+                        </div>
                     </Column>
                     <Column title="contacto">
                         <p>
@@ -88,6 +103,7 @@ export default class Footer extends Component {
             <div className="Copyright footer-copyright text-center py-3">© {new Date().getFullYear()} Copyright:
                 <a href={`https://${generalInformation.domainWeb}`}>{` ${generalInformation.nameCompany}`}</a>
             </div>
+            
             <style jsx>{`
                 .FollowUs{
                     background: #59bb45;

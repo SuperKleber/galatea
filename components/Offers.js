@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import Card from './dumps/Card';
 
+// Este Componente estaba pensado como una sección de ofertas de productos, al final no se aplicó pero puede
+// seguir contruyéndolo
+
 export default class Offers extends Component {
   render() {
     const {data} = this.props 

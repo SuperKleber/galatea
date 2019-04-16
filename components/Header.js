@@ -3,14 +3,18 @@ import Modal from "./dumps/Modal"
 import About from './About';
 import Mercados from './Mercados';
 
+// Este componente cumple la función principal de ser un Menú
+// el props "active" es una forma rudimentaria de pintar un poco más negro
+// la parte del menú en el que te encuentras, ahora mismo sólo funciona con la pagína "products"
+
 export default class Header extends Component {
   render() {
     const {active, title, dataMercados}=this.props
     return (
     <header className="Header Menu">
-        <a href="index" className="logo d-flex align-items-center mb-2 m-3">
+        <a href="./index" className="logo d-flex align-items-center mb-2 m-3">
           <img className="rounded-circle mt-auto mr-2" src="../static/images/isotipoGalatea.png" alt="logo"/>
-          <h3 className="m-0 titleWeb">{title ? title : "galatea"}</h3 >
+          <h1 className="m-0 titleWeb">{title ? title : "galatea"}</h1 >
         </a>
           
         <nav className="navbar navbar-expand-lg navbar-light bg-light container-fluid">
@@ -20,24 +24,7 @@ export default class Header extends Component {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Modal 
-                  buttonOpenModal={
-                      <a className="nav-link" style={{cursor:"pointer"}} >Nuestros clientes<span className="sr-only">(current)</span></a>
-                  }
-                  modalFooter={
-                    <div className="d-flex align-items-center justify-content-center row">
-                      <h6 className="text-center m-0 mr-3">Solicita tu cotización</h6>
-                      <a href="mailto:info@galatea.ws mr-3">info@galatea.ws</a>
-                    </div>
-                  }
-                  title="Industria y Clientes">
-                  <Mercados data={dataMercados}></Mercados>
-                </Modal> 
-              </li>
-              <li className="nav-item">
-                <a className={`nav-link ${active=="products" && "active"}`} href="products">productos y servicios</a>
-              </li>
+              
               <li className="nav-item">
                 <Modal 
                   buttonOpenModal={
@@ -53,7 +40,24 @@ export default class Header extends Component {
                   <About></About>
                 </Modal> 
               </li>
-              
+              <li className="nav-item">
+                <a className={`nav-link ${active=="products" && "active"}`} href="./products">productos y servicios</a>
+              </li>
+              <li className="nav-item">
+                <Modal 
+                  buttonOpenModal={
+                      <a className="nav-link" style={{cursor:"pointer"}} >Nuestros clientes<span className="sr-only">(current)</span></a>
+                  }
+                  modalFooter={
+                    <div className="d-flex align-items-center justify-content-center row">
+                      <h6 className="text-center m-0 mr-3">Solicita tu cotización</h6>
+                      <a href="mailto:info@galatea.ws mr-3">info@galatea.ws</a>
+                    </div>
+                  }
+                  title="Industria y Clientes">
+                  <Mercados data={dataMercados}></Mercados>
+                </Modal> 
+              </li>
               <li className="nav-item">
                 <a className="nav-link" href="#footer">Contacto</a>
               </li>
@@ -72,7 +76,7 @@ export default class Header extends Component {
               background: #fff;
             }
             .logo img{
-              width: 40px;
+              width: 60px;
             }
           `}</style>
       </header>

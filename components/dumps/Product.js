@@ -1,30 +1,57 @@
 import React from 'react'
-import Responsive from "./Responsive"
 import Card from "./Card"
+
+// Este componente muestra el producto en una carta.
+// Quizá esté un poco confundido por la función "Resize", simplemente
+// es una forma de hacer responsive este componente en especial,
+// la razón de hacerlo de esta manera y no directamente en los estilos,
+// es porque card recibe el ancho y el alto como props, y al no recibirlos pone unos por defecto,
+// debido a que queremos unas dimensiones específicas para este componente (Products) y no queremos
+// alterar el componente "Card" (para que siga siendo reutilizable), hacemos el responsive directamente con 
+// JavaScript.
+
+// PROPS:
+// "data": es toda la información del producto que se le pasará a "Card"
+// "email": el email para pedir info de un producto
+
 export default class Product extends React.Component {
-    state={clickProduct:false}
-    handleClickProduct=()=>{
-        console.log(this.props.data)
-        this.setState({
-            clickProduct: false
-            // esta función sirve para cambiar el estilo del producto al hacer click, ahora la función retorna "false" porque esta función está desactivada de momento
-        })
+    state={
+        mobile: false
+    }
+    componentDidMount(){
+        this.Resize()
+        window.addEventListener("resize", this.Resize)
+    }
+    Resize=()=>{
+        if(window.matchMedia("(max-width: 767px)").matches) {
+            this.setState({
+                mobile: true
+            })
+        }else{
+                this.setState({
+                    mobile: false
+                })
+        }
     }
     render(){
-        const {data, handleClickProduct,clickProduct} = this.props
+        const {data,email} = this.props
+        
         return (
             <div>
-                <div onClick={this.handleClickProduct} className={`product m-2 ${this.state.clickProduct && "fullScreen"}`}>
-                    <a href={data.docs && data.docs.docUrl || null}>
-                        <Responsive.Default>
-                            <Card data={data} height={`240px`}></Card>
-                        </Responsive.Default>
-                        <Responsive.Mobile>
-                            <Card data={data} height={`150px`} width="9rem"></Card>
-                        </Responsive.Mobile>
-                    </a>
+                <div  className={`product m-2 ${this.state.clickProduct && "fullScreen"}`}>
+                    <Card data={data} height={!this.state.mobile ? "240px" : "200px"}     width={this.state.mobile && "100%"}>
+                        { 
+                            data.doc ?
+                            <a href={data.doc.docUrl} download={`${data.doc.docName}`} className="info btn btn-primary mt-2">Descargar info</a> 
+                            :
+                            <a href={`mailto:${email}`} className="info text-info mt-2">Pedir info {email}</a>
+                        }
+                    </Card>
                 </div>
                 <style jsx>{`
+                    @media screen and (max-width: 767px){
+                        .info{font-size: 0.8rem}
+                    }
                     .fullScreen{
                         position: fixed;
                         top: 25svh;
@@ -40,9 +67,11 @@ export default class Product extends React.Component {
                     .product:hover{
                         transform: scale(1.05) !important;
                     }
-                `}</style>
+                    
+                    `}</style>
 
             </div>
         )
     }
+    
 }

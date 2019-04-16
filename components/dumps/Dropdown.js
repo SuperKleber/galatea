@@ -1,5 +1,8 @@
 import React from 'react'
 
+// Este componente en simplemente un dropdown que cada elemento del mismo ejecuta una función que se le pasa
+// por el prop "handleActionDropdown" pasándole de parámetro el elemento que fue seleccionado
+
 export default function Dropdown(props) {
   const {data, inSector, handleActionDropdown}=props
   return (

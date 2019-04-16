@@ -2,6 +2,12 @@ import React, { Component } from 'react'
 import Card from "./dumps/Card"
 import Responsive from './dumps/Responsive';
 import Product from './dumps/Product';
+
+// Aquí es donde se despliega todos los productos solicitados
+
+// props:
+// "products" es la información de cada producto individual
+// "category" y "description" son texto que se puede añadir en la cabecera de los productos
 export default class Products extends Component {
 
   render() {
@@ -17,7 +23,8 @@ export default class Products extends Component {
                     products.map((element)=>{
                         return(
                             <Product 
-                            data={element}>
+                            data={element}
+                            email={this.props.email}>
                             </Product>
                         )
                     })

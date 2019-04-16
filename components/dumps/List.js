@@ -1,33 +1,37 @@
 import React from 'react'
-import Responsive from "./Responsive"
+
+// Este componente es una lista pero tiene dos funcionalidades,
+// si a esta lista se le pasa una funcion en el prop "handelActionList" entonces al hacer click en un elemento de la lista,
+// este se pintará de azul, y ejecutará dicha función pasándo de parametro a el mismo elemento de la lista,
+// de esta manera el componente padre podrá recibir información de cuál elemento de la lista
+// fue seleccionado por el usuario.
+// Si no se le pasa esta función será una lista común y corriente, pero que si un elemento de dicha lista, contiene
+// un "href" en el json, entones direccionará a ese href
+
+
+// PROPS:
+// data: es un array todos los elementos de la lista
+// handleActionList: la acción que se quiere realizar al hacer click en un elemento de la lista
+
+
 export default function List(props) {
-  const {data, dataChildren, handleActionList}= props
-  const {Desktop, Tablet, Mobile, Default,MediaQuery} = Responsive
+  const {data,  handleActionList}= props
   return (
     <div>
         <div className="List row">
 
-            <div className="col-12 col-md-4">
+            <div className="col">
                 <div className="list-group" id="list-tab" role="tablist">
                 {
                     data.map((element, i)=>{   
                         return(
-                            <a onClick={function(){handleActionList(element)} || null} className={`list-group-item list-group-item-action ${element.category==dataChildren.category && "active"}`} id={`list-${element.category.split(" ").join("")}-list`} data-toggle="list" href={`#list-${element.category.split(" ").join("")}`} role="tab" aria-controls={element.category}>{element.category.toUpperCase()}</a>       
+                            handleActionList  ?
+                            <a onClick={function(){handleActionList(element, i)} || null} className={`list-group-item list-group-item-action `} id={`list-${element.category.split(" ").join("")}-list`} data-toggle="list" href={`#list-${element.category.split(" ").join("")}`} role="tab" aria-controls={element.category}>{element.category.toUpperCase()}</a>       
+                            :
+                            <a href={element.href || null} style={{width:"100%"}} className="list-group-item disabled text-muted" >{element.text}</a> 
+
                         )
                     })
-                }
-                </div>
-            </div>
-            <div className="col-12 col-md-8">
-                <div className="tab-content" id="nav-tabContent">
-                {
-                    <div className="tab-pane fade show active" id={`list-${dataChildren.category.split(" ").join("")}`} role="tabpanel" aria-labelledby={`list-${dataChildren.category}-list`}>
-                    {
-                        React.Children.map(props.children, child =>
-                            React.cloneElement(child, { data: dataChildren }))
-                        
-                    }
-                    </div>
                 }
                 </div>
             </div>
