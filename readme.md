@@ -1,4 +1,4 @@
-#[galatea.solutions](https://galatea.solutions)
+# [galatea.solutions](https://galatea.solutions)
 powered by [kleber.digital](https://nodesource.com/products/nsolid)
 
 ## 1 Descripción del proyecto
