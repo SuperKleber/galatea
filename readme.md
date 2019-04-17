@@ -56,7 +56,7 @@ esto abrirá el proyecto en el puerto 3000
 * Ejecute ``` npm run build ``` 
 y luego ``` npm run start ``` 
 
-##4 Deployment
+## 4 Deployment
 Este proyecto hizo Deploy con zeit-now [documentación aquí](https://zeit.co/docs).
 Para hacer Deploy al proyecto simplemente escribir 
 ```sh 
@@ -74,7 +74,8 @@ Usted puede poner de forma gratuita dominios con la terminación [lo-que-usted-q
 si usted desea comprar un dominio puede hacerlo con now,
 si usted desea añadir un dominio puede hacerlo también, 
 le recomiendo revisar la documentación.
-##5 Estructura del proyecto
+
+## 5 Estructura del proyecto
 
 El proyecto consta de 4 partes:
 #### 5.1 pages
