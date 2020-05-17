@@ -62,7 +62,7 @@ module.exports = {
     {
       resolve: "gatsby-source-sanity",
       options: {
-        projectId: "497ujr2b",
+        projectId: process.env.SANITY_ID,
         dataset: "production",
 
         // a token with read permissions is required
@@ -72,7 +72,7 @@ module.exports = {
         // If the Sanity GraphQL API was deployed using `--tag <name>`,
         // use `graphqlTag` to specify the tag name. Defaults to `default`.
         graphqlTag: "default",
-        watchMode: true,
+        // watchMode: true,
       },
     },
     {
