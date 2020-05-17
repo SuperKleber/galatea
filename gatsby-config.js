@@ -40,9 +40,8 @@ const queries = [
           id: node.id,
           title: node.title,
           description: node.description,
-          category: node.category.title,
-          brand: node.brand.title,
-          keywords: node.keywords,
+          category: node.category && node.category.title,
+          brand: node.brand && node.brand.title,
           doc: node.doc && node.doc.asset && node.doc.asset.url,
           image: node.image && node.image.asset && node.image.asset.url,
         };

@@ -52,16 +52,17 @@ const HandleProducts = ({ email }) => {
                     <div>
                       <p>{node.description}</p>
                       <span className="badge badge-warning">
-                        {node.brand.title}
+                        {node.brand && node.brand.title}
                       </span>
                       <span className="badge badge-light">
-                        {node.category.title}
+                        {node.category && node.category.title}
                       </span>
                       <br />
                       <br />
                     </div>
                   ),
-                  imgUrl: node.image.asset.url,
+                  imgUrl:
+                    node.image && node.image.asset && node.image.asset.url,
                   docUrl: node.doc && node.doc.asset && node.doc.asset.url,
                   email: data.sanityInfo.contact.email,
                 }}
