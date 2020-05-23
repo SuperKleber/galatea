@@ -21,8 +21,24 @@ export default {
       title: "Categoría del producto",
       description:
         "Ejemplo: carro de suministro | Puede agregar más categorías en la sección 'Categorías de productos'",
-      type: "reference",
-      to: { type: "category" },
+      type: "array",
+      of: [{ type: "reference", to: [{ type: "category" }] }],
+    },
+    {
+      name: "promo",
+      title: "Promoción del producto",
+      description:
+        "Este producto será visible en la página de promociones y novedades",
+      type: "string",
+      validation: (Rule) =>
+        Rule.max(7).warning("Recomendación: poner pocos carecteres"),
+    },
+    {
+      name: "services",
+      title: "Servicios especiales",
+      description: "Añadir servicios especiales para este producto",
+      type: "array",
+      of: [{ type: "string" }],
     },
     {
       name: "brand",

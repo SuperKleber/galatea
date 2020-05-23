@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Card from "./dumps/Card";
 import SearchApp from "./SearchApp";
+import CardColumns from "./dumps/CardColumns";
+import { useEffect } from "react";
 
-const HandleProducts = ({ email }) => {
-  const data = useStaticQuery(graphql`
+const HandleProducts = ({ search, novedad }) => {
+  let data = useStaticQuery(graphql`
     query AllProduct {
       allSanityProduct {
         edges {
@@ -18,6 +20,8 @@ const HandleProducts = ({ email }) => {
             category {
               title
             }
+            services
+            promo
             doc {
               asset {
                 url
@@ -40,36 +44,15 @@ const HandleProducts = ({ email }) => {
   `);
   return (
     <div className="container mt-4">
-      <SearchApp></SearchApp>
+      {!novedad && (
+        <>
+          <SearchApp defaultSearch={search}></SearchApp>
+          <hr />
+        </>
+      )}
+      <h1>{novedad ? "Todas las novedades" : "Todos los productos"}</h1>
       <div className="row">
-        {data.allSanityProduct.edges.map(({ node }, i) => {
-          return (
-            <div key={i} className="col col-sm d-flex justify-content-center">
-              <Card
-                data={{
-                  ...node,
-                  description: (
-                    <div>
-                      <p>{node.description}</p>
-                      <span className="badge badge-warning">
-                        {node.brand && node.brand.title}
-                      </span>
-                      <span className="badge badge-light">
-                        {node.category && node.category.title}
-                      </span>
-                      <br />
-                      <br />
-                    </div>
-                  ),
-                  imgUrl:
-                    node.image && node.image.asset && node.image.asset.url,
-                  docUrl: node.doc && node.doc.asset && node.doc.asset.url,
-                  email: data.sanityInfo.contact.email,
-                }}
-              ></Card>
-            </div>
-          );
-        })}
+        <CardColumns data={data} novedad={novedad} />
       </div>
     </div>
   );

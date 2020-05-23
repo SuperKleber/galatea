@@ -16,6 +16,8 @@ const myQuery = `{
         category {
           title
         }
+        services
+        promo
         image{
           asset{
             url
@@ -40,7 +42,8 @@ const queries = [
           id: node.id,
           title: node.title,
           description: node.description,
-          category: node.category && node.category.title,
+          category: node.category && node.category.map((c) => c.title),
+          services: node.services && node.services.map((s) => s),
           brand: node.brand && node.brand.title,
           doc: node.doc && node.doc.asset && node.doc.asset.url,
           image: node.image && node.image.asset && node.image.asset.url,
@@ -71,7 +74,7 @@ module.exports = {
         // If the Sanity GraphQL API was deployed using `--tag <name>`,
         // use `graphqlTag` to specify the tag name. Defaults to `default`.
         graphqlTag: "default",
-        // watchMode: true,
+        watchMode: true,
       },
     },
     {
@@ -89,7 +92,16 @@ module.exports = {
         apiKey: process.env.ALGOLIA_API_ADMIN,
         indexName: "product", // for all queries
         queries,
-        enablePartialUpdates: true, // default: false
+        enablePartialUpdates: false, // default: false
+        matchFields: [
+          "id",
+          "title",
+          "description",
+          "category",
+          "brand",
+          "services",
+          "image",
+        ],
       },
     },
   ],

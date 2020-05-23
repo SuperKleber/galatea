@@ -10,6 +10,18 @@ import { Link } from "gatsby";
 // props:
 // "data" es donde se encuenntran todos los  sectores principales
 
+const ButtonSearch = ({ search }) => (
+  <Link
+    className="btn btn-secondary"
+    to="/products"
+    state={{
+      search: search,
+    }}
+  >
+    Ver productos
+  </Link>
+);
+
 export default class Sections extends Component {
   render() {
     const { data } = this.props;
@@ -17,7 +29,13 @@ export default class Sections extends Component {
       <div className="Sections container align-items-center justify-content-center">
         <div className="row d-flex justify-content-center justify-content-md-between flex-wrap mt-4 mb-4">
           {data.rubros.map((element, i) => {
-            return <Card key={i} data={element}></Card>;
+            return (
+              <Card
+                key={i}
+                data={element}
+                button={<ButtonSearch search={element.title} />}
+              ></Card>
+            );
           })}
         </div>
         <div className="row justify-content-center">

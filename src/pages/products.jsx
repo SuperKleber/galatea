@@ -29,6 +29,7 @@ export default class products extends Component {
         <HandleProducts
           data={data.components.sectors}
           email={data.generalInformation.email}
+          search={this.props.location.state && this.props.location.state.search}
         ></HandleProducts>
       </Layout>
     );

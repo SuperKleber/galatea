@@ -16,18 +16,34 @@ import List from "./List";
 // decidí dejarlo así de momento
 
 export default function Card(props) {
-  const { imgUrl, title, description, docUrl, email } = props.data;
-  const { horizontal, width, height } = props;
+  const { imgUrl, title, description, tag } = props.data;
+  const { horizontal, width, height, button, className } = props;
   return (
-    <div className="card mt-4 " style={props.style}>
-      {imgUrl && (
-        <img src={imgUrl} className="card-img-top" alt={`foto de ${title}`} />
-      )}
-
-      <div className="card-body d-flex flex-column justify-content-between">
-        {title && <h6 className={`card-title`}>{title}</h6>}
-        {description && <div className="card-text">{description}</div>}
-        {docUrl ? (
+    <div className={`card mt-4 ${className}`} style={props.style}>
+      {tag && <div className="tag">{tag}</div>}
+      <div className="row no-gutters" style={{ height: "100%" }}>
+        {imgUrl && (
+          <div
+            className={`col-${
+              horizontal ? 4 : 12
+            } d-flex justify-content-center align-items-center rounded`}
+          >
+            <img
+              src={imgUrl}
+              style={{ width: "100%" }}
+              className="card-img-top"
+              alt={`foto de ${title}`}
+            />
+          </div>
+        )}
+        <div className={`col-${horizontal ? 8 : 12}`}>
+          <div
+            style={{ height: "100%" }}
+            className="card-body d-flex flex-column justify-content-between"
+          >
+            {title && <h6 className={`card-title`}>{title}</h6>}
+            {description && <div className="card-text">{description}</div>}
+            {/* {docUrl ? (
           <a target="_blank" href={docUrl} className={`btn btn-primary`}>
             Descargar Info
           </a>
@@ -35,8 +51,11 @@ export default function Card(props) {
           <a target="_blank" href={`mailto:${email}`} className={`link`}>
             Pedir info {email}
           </a>
-        )}
-        {props.children}
+        )} */}
+            {button && button}
+            {props.children}
+          </div>
+        </div>
       </div>
       <style jsx="true">{`
         .card{
@@ -44,13 +63,24 @@ export default function Card(props) {
           display: flex;
           flex-direction: column;
           justify-content: center;
+          position: relative;
+        }
+        .tag{
+          position: absolute;
+          right: 0;
+          top: 0;
+          background: #de3e5e;
+          color: #ffffff;
+          border-radius: 0 0 0 4px;
+          padding: 4px;
+          z-index: 2;
         }
         .card img{
-          height: ${height || "163px"};
           Object-fit: cover;
         }
-        @media screen and (max-width:767px){
+        @media  (max-width:767px){
           .card-text{font-size:.8em}
+          .card{margin: auto}
         `}</style>
     </div>
   );
