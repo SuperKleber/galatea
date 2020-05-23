@@ -63,16 +63,25 @@ const SearchBox = ({
   return (
     <div className="">
       {!simple && (
-        <>
-          <div className="d-flex flex-wrap">
-            <p className="mr-3">Marcas:</p>
-            <div className="d-flex flex-wrap">
+        <div className="d-flex mb-4 flex-wrap">
+          <div className="dropdown mr-2">
+            <button
+              className="btn btn-warning dropdown-toggle"
+              type="button"
+              id="brands"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Marcas
+            </button>
+            <div className="dropdown-menu" aria-labelledby="brands">
               {brands.map(({ node }, i) => {
                 return (
                   <button
                     key={i}
                     onClick={() => change(node.title)}
-                    className="mr-1 btn btn-warning"
+                    className="dropdown-item"
                   >
                     {node.title}
                   </button>
@@ -80,16 +89,24 @@ const SearchBox = ({
               })}
             </div>
           </div>
-          <br />
-          <div className="d-flex flex-wrap">
-            <p className="mr-3">Categorías:</p>
-            <div className="d-flex flex-wrap">
+          <div className="dropdown  mr-2">
+            <button
+              className="btn btn-light dropdown-toggle"
+              type="button"
+              id="categories"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Categorías
+            </button>
+            <div className="dropdown-menu" aria-labelledby="categories">
               {categories.map(({ node }, i) => {
                 return (
                   <button
                     key={i}
                     onClick={() => change(node.title)}
-                    className="mr-1 btn btn-light"
+                    className="dropdown-item"
                   >
                     {node.title}
                   </button>
@@ -97,8 +114,7 @@ const SearchBox = ({
               })}
             </div>
           </div>
-          <br />
-        </>
+        </div>
       )}
       <div className="input-group ">
         <input
@@ -200,7 +216,7 @@ const Hits = ({ hits, simple, filter = true }) => {
         })}
       </div>
       {hits.length === 0 && (
-        <div class="alert alert-warning" role="alert">
+        <div className="alert alert-warning" role="alert">
           No se encontraron resultados
         </div>
       )}
