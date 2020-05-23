@@ -155,9 +155,8 @@ const Hits = ({ hits, simple, filter = true }) => {
                     )}
                     {hit.brand && (
                       <>
-                        <hr />
                         <div>
-                          <h6>Marca:</h6>
+                          {!simple && <h6>Marca:</h6>}
                           <span className="badge badge-warning">
                             <Highlight hit={hit} attribute="brand" />
                           </span>
@@ -166,9 +165,9 @@ const Hits = ({ hits, simple, filter = true }) => {
                     )}
                     {hit.category.length !== 0 && (
                       <>
-                        <hr />
+                        {!simple && <hr />}
                         <div className="Category">
-                          <h6>Categorías:</h6>
+                          {!simple && <h6>Categorías:</h6>}
 
                           <Highlight
                             className=""
@@ -178,7 +177,7 @@ const Hits = ({ hits, simple, filter = true }) => {
                         </div>
                       </>
                     )}
-                    {hit.services.length !== 0 && (
+                    {hit.services.length !== 0 && !simple && (
                       <>
                         <hr />
                         <div className="Services">
@@ -191,7 +190,7 @@ const Hits = ({ hits, simple, filter = true }) => {
                         </div>
                       </>
                     )}
-                    <br />
+                    {!simple && <br />}
                   </div>
                 ),
                 imgUrl: hit.image,
@@ -204,6 +203,15 @@ const Hits = ({ hits, simple, filter = true }) => {
         <div class="alert alert-warning" role="alert">
           No se encontraron resultados
         </div>
+      )}
+      {simple && (
+        <Link
+          className="btn btn-primary"
+          style={{ width: "100%", margin: "8px 0" }}
+          to="/products"
+        >
+          Búsqueda avanzada
+        </Link>
       )}
       <style jsx="true">
         {`
