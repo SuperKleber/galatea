@@ -11,5 +11,11 @@ export default {
       title: "Categoría",
       type: "string",
     },
+    {
+      name: "section",
+      title: "Sección, ejemplo: seguridad industrial",
+      type: "reference",
+      to: { type: "section" },
+    },
   ],
 };

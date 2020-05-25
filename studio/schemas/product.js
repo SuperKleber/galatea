@@ -38,7 +38,7 @@ export default {
       title: "Servicios especiales",
       description: "Añadir servicios especiales para este producto",
       type: "array",
-      of: [{ type: "string" }],
+      of: [{ type: "reference", to: [{ type: "services" }] }],
     },
     {
       name: "brand",

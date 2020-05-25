@@ -1,6 +1,6 @@
 export default {
   name: "targetInfo",
-  title: "Tarjetas de información",
+  title: "Secciones de productos",
   type: "object",
   fields: [
     {

@@ -3,6 +3,8 @@ import createSchema from "part:@sanity/base/schema-creator";
 import product from "./product";
 import info from "./info";
 import category from "./category";
+import section from "./section";
+import services from "./services";
 import brand from "./brand";
 import setting from "./setting";
 import contact from "./objects/contact";
@@ -21,6 +23,8 @@ export default createSchema({
     product,
     info,
     category,
+    section,
+    services,
     brand,
     setting,
 
