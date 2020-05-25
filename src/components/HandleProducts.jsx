@@ -4,7 +4,8 @@ import Card from "./dumps/Card";
 import SearchApp from "./SearchApp";
 import CardColumns from "./dumps/CardColumns";
 import { useEffect } from "react";
-
+import Sections from "./Sections";
+import dataJson from "../../data/data.json";
 const HandleProducts = ({ search, novedad }) => {
   let data = useStaticQuery(graphql`
     query AllProduct {
@@ -50,6 +51,7 @@ const HandleProducts = ({ search, novedad }) => {
           <hr />
         </>
       )}
+      {/* {!novedad && <Sections data={dataJson.components.sections}></Sections>} */}
       <h1>{novedad ? "Todas las novedades" : "Todos los productos"}</h1>
       <div className="row">
         <CardColumns data={data} novedad={novedad} />

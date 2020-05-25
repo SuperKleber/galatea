@@ -19,7 +19,8 @@ export default {
     {
       name: "description",
       title: "Descripción",
-      type: "string",
+      type: "text",
+      rows: 2,
     },
   ],
 };

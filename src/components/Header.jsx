@@ -49,9 +49,17 @@ export default class Header extends Component {
                   to="/products"
                   className={`nav-link ${active == "products" && "active"}`}
                 >
-                  PRODUCTOS Y SERVICIOS
+                  PRODUCTOS
                 </Link>
               </li>
+              {/* <li className="nav-item">
+                <Link
+                  to="/products"
+                  className={`nav-link ${active == "products" && "active"}`}
+                >
+                  SERVICIOS
+                </Link>
+              </li> */}
 
               <li className="nav-item">
                 <Link
@@ -66,7 +74,7 @@ export default class Header extends Component {
                   className={`nav-link  ${active == "novedad" && "active"}`}
                   to="/novedad"
                 >
-                  NOVEDAD
+                  PROMOCIONES Y NOVEDADES
                 </Link>
               </li>
             </ul>
@@ -107,7 +115,7 @@ export default class Header extends Component {
             right: 24px;
             top: 9px;
             z-index: 100;
-            width: 500px;
+            width: 350px;
             background: rgba(0, 0, 0, 0.4);
             border-radius: 4px;
           }

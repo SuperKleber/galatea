@@ -19,7 +19,7 @@ export default function Subscribe(props) {
     <div id="mc_embed_signup " className="mt-4">
       <form
         className="form container justify-content-center align-items-center flex-column flex-md-row"
-        action="https://galatea.us20.list-manage.com/subscribe/post?u=f8030cdf2dc4516e0939e9368&amp;id=4b0be65720"
+        action="/"
         method="post"
         id="mc-embedded-subscribe-form"
         name="mc-embedded-subscribe-form"
@@ -375,6 +375,7 @@ export default function Subscribe(props) {
             />
           </div>
         )}
+
         {!emailOnly && (
           <div className="form-group row pr-4 pl-4 p-md-0 mx-sm-3 mb-2 d-flex justify-content-center">
             <label htmlFor="mce-PUESTO" className="mr-2 sr-only">
@@ -390,11 +391,25 @@ export default function Subscribe(props) {
             />
           </div>
         )}
+        {!emailOnly && (
+          <div className="form-group row pr-4 pl-4 p-md-0 mx-sm-3 mb-2 d-flex justify-content-center">
+            <label htmlFor="mce-PUESTO" className="mr-2 sr-only">
+              Puesto en la empresa
+            </label>
+            <textarea
+              placeholder="Mensaje"
+              type="text"
+              defaultValue=""
+              name="MESSAGE"
+              className="form-control"
+              id="mce-PUESTO"
+            />
+          </div>
+        )}
         <div className="form-group  row pr-4 pl-4 p-md-0 mx-sm-3 mb-2 d-flex justify-content-center">
           <input
             type="submit"
             defaultValue="Subscribe"
-            name="subscribe"
             id="mc-embedded-subscribe"
             className=" btn btn-success mb-2"
           />

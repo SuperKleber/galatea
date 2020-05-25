@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Layout from "../components/Layout";
 import HandleProducts from "../components/HandleProducts";
 import data from "../../data/data.json";
+import Sections from "../components/Sections";
 
 // products.js es la página principal de todo el sitio web,
 // recomiendo siempre mantener limpio este código agregando

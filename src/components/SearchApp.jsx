@@ -43,16 +43,24 @@ const SearchBox = ({
           }
         }
       }
+      sanitySetting {
+        targetInfo {
+          title
+        }
+      }
     }
   `);
   const categories = data.allSanityCategory.edges;
+  const targetInfo = data.sanitySetting.targetInfo;
   const brands = data.allSanityBrand.edges;
-  const [value, setValue] = useState(defaultSearch ? defaultSearch : "");
-  const change = (value) => {
-    refine(value);
-    setValue(value);
+  const [value, setValue] = useState("");
+  let search = value !== "" ? value : defaultSearch ? defaultSearch : "";
+  const change = (search) => {
+    refine(search);
+    setValue(search);
     onFocus();
   };
+
   useEffect(() => {
     setTimeout(() => {
       if (defaultSearch) {
@@ -60,65 +68,87 @@ const SearchBox = ({
       }
     }, 500);
   }, []);
+
   return (
     <div className="">
       {!simple && (
-        <div className="d-flex mb-4 flex-wrap">
-          <div className="dropdown mr-2">
-            <button
-              className="btn btn-warning dropdown-toggle"
-              type="button"
-              id="brands"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Marcas
-            </button>
-            <div className="dropdown-menu" aria-labelledby="brands">
-              {brands.map(({ node }, i) => {
-                return (
-                  <button
-                    key={i}
-                    onClick={() => change(node.title)}
-                    className="dropdown-item"
-                  >
-                    {node.title}
-                  </button>
-                );
-              })}
+        <div className="mb-4">
+          <div className="d-flex mb-1 flex-wrap">
+            <div className="dropdown  mr-2">
+              <button
+                className="btn btn-light dropdown-toggle"
+                type="button"
+                id="categories"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Categorías
+              </button>
+              <div className="dropdown-menu" aria-labelledby="categories">
+                {categories.map(({ node }, i) => {
+                  return (
+                    <button
+                      key={i}
+                      onClick={() => change(node.title)}
+                      className="dropdown-item"
+                    >
+                      {node.title}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="dropdown mr-2">
+              <button
+                className="btn btn-light dropdown-toggle"
+                type="button"
+                id="brands"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Marcas
+              </button>
+              <div className="dropdown-menu" aria-labelledby="brands">
+                {brands.map(({ node }, i) => {
+                  return (
+                    <button
+                      key={i}
+                      onClick={() => change(node.title)}
+                      className="dropdown-item"
+                    >
+                      {node.title}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
-          <div className="dropdown  mr-2">
-            <button
-              className="btn btn-light dropdown-toggle"
-              type="button"
-              id="categories"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Categorías
-            </button>
-            <div className="dropdown-menu" aria-labelledby="categories">
-              {categories.map(({ node }, i) => {
-                return (
-                  <button
-                    key={i}
-                    onClick={() => change(node.title)}
-                    className="dropdown-item"
-                  >
-                    {node.title}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
+
+          {targetInfo.map(({ title }, i) => {
+            return (
+              <button
+                key={i}
+                onClick={() => change(title)}
+                className="btn btn-success mr-2"
+                type="button"
+              >
+                {title}
+              </button>
+            );
+          })}
         </div>
       )}
       <div className="input-group ">
         <input
-          value={value}
+          value={search}
+          style={{
+            color: "#28a745",
+            fontSize: search !== "" ? "1.2em" : "",
+            fontWeight: search !== "" ? "bold" : "",
+          }}
           className="form-control"
           onFocus={onFocus}
           // onBlur={onBlur}
@@ -142,9 +172,10 @@ const SearchBox = ({
   );
 };
 const Hits = ({ hits, simple, filter = true }) => {
+  console.log(hits);
   return (
     <div className="">
-      {!simple && <h1>Resultados de búsqueda</h1>}
+      {!simple && <h3>Resultados de búsqueda </h3>}
       <div className={simple ? "d-flex flex-wrap" : "card-columns"}>
         {hits.map((hit, i) => {
           return (

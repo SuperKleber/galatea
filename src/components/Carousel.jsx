@@ -1,8 +1,23 @@
 import React from "react";
-// Este componente es el Carousel de Boostrap (ver documentación de Boostrap),
-// lastimosamente este componente para agregar o quitar Slides se debe hacer directamente aquí, desde
-// el código, se recomienda escalar este componente
+import { useStaticQuery, graphql, Link } from "gatsby";
+
 export default function Carousel() {
+  const data = useStaticQuery(graphql`
+    query carousel {
+      sanitySetting {
+        carousel {
+          title
+          description
+          image {
+            asset {
+              url
+            }
+          }
+        }
+      }
+    }
+  `);
+  const carousel = data.sanitySetting.carousel;
   return (
     <div className="bd-example Carousel container">
       <div
@@ -19,32 +34,17 @@ export default function Carousel() {
           <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
         </ol>
         <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img
-              src="/images/carousel2.jpg"
-              className="d-block w-100"
-              alt="..."
-            />
-            <div className="carousel-caption p-3">
-              <h5>Galatea</h5>
-              <p>
-                Somos una empresa que ofrece soluciones tecnológicas en diversas
-                áreas, desde seguridad industrial hasta sistemas de iluminación
-                inteligente
-              </p>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <img
-              src="/images/carousel3.jpg"
-              className="d-block w-100"
-              alt="..."
-            />
-            <div className="carousel-caption p-3">
-              <h5>Vendemos Ilumincación y seguridad</h5>
-              <p>Desde carros de bomberos hasta sistemas led inteligentes</p>
-            </div>
-          </div>
+          {carousel.map((element, i) => {
+            return (
+              <CarouselItem
+                key={i}
+                title={element.title}
+                description={element.description}
+                imgUrl={element.image.asset.url}
+                active={i === 0}
+              />
+            );
+          })}
         </div>
         <a
           className="carousel-control-prev"
@@ -87,3 +87,14 @@ export default function Carousel() {
     </div>
   );
 }
+const CarouselItem = ({ title, description, imgUrl, active }) => {
+  return (
+    <div className={`carousel-item ${active ? "active" : ""}`}>
+      <img src={imgUrl} className="d-block w-100" alt={title} />
+      <div className="carousel-caption p-3">
+        <h5>{title}</h5>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+};
