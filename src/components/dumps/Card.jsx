@@ -19,7 +19,7 @@ export default function Card(props) {
   const [toggleText, setToggleText] = useState(false);
   const { imgUrl, title, description, tag } = props.data;
   const { horizontal, width, height, button, className } = props;
-  const limitText = 50;
+  const limitText = 200;
   return (
     <div className={`card mt-4 ${className}`} style={props.style}>
       {tag && <div className="tag">{tag}</div>}

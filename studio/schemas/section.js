@@ -24,5 +24,12 @@ export default {
         hotspot: true,
       },
     },
+    {
+      name: "categories",
+      title: "Categorías de la sección",
+      type: "reference",
+      type: "array",
+      of: [{ type: "reference", to: [{ type: "category" }] }],
+    },
   ],
 };

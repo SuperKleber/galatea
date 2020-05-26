@@ -36,10 +36,13 @@ const SearchBox = ({
           }
         }
       }
-      allSanityCategory {
+      allSanitySection {
         edges {
           node {
             title
+            categories {
+              title
+            }
           }
         }
       }
@@ -50,11 +53,17 @@ const SearchBox = ({
       }
     }
   `);
-  const categories = data.allSanityCategory.edges;
+  const sections = data.allSanitySection.edges;
+  const categories = [];
+  sections.forEach(({ node }) => {
+    node.categories.forEach((category) => {
+      categories.push(category);
+    });
+  });
   const targetInfo = data.sanitySetting.targetInfo;
   const brands = data.allSanityBrand.edges;
-  const [value, setValue] = useState("");
-  let search = value !== "" ? value : defaultSearch ? defaultSearch : "";
+  const [value, setValue] = useState(defaultSearch ? defaultSearch : "");
+  let search = value;
   const change = (search) => {
     refine(search);
     setValue(search);
@@ -68,6 +77,11 @@ const SearchBox = ({
       }
     }, 500);
   }, []);
+  useEffect(() => {
+    if (defaultSearch) {
+      change(defaultSearch);
+    }
+  }, [defaultSearch]);
 
   return (
     <div className="">
@@ -86,15 +100,26 @@ const SearchBox = ({
                 Categorías
               </button>
               <div className="dropdown-menu" aria-labelledby="categories">
-                {categories.map(({ node }, i) => {
+                {sections.map(({ node }, i) => {
                   return (
-                    <button
-                      key={i}
-                      onClick={() => change(node.title)}
-                      className="dropdown-item"
-                    >
-                      {node.title}
-                    </button>
+                    <div key={i}>
+                      <div className="badge badge-success">{node.title}</div>
+
+                      {node.categories.map((category, index) => {
+                        return (
+                          <button
+                            key={index}
+                            onClick={() => change(category.title)}
+                            className="dropdown-item"
+                          >
+                            {category.title}
+                          </button>
+                        );
+                      })}
+                      {sections.length - 1 !== i && (
+                        <div className="dropdown-divider"></div>
+                      )}
+                    </div>
                   );
                 })}
               </div>
@@ -224,20 +249,6 @@ const Hits = ({ hits, simple, filter = true }) => {
                         </div>
                       </>
                     )}
-                    {hit.services.length !== 0 && !simple && (
-                      <>
-                        <hr />
-                        <div className="Services">
-                          <h6>Servicios:</h6>
-                          <Highlight
-                            className=""
-                            hit={hit}
-                            attribute="services"
-                          />
-                        </div>
-                      </>
-                    )}
-                    {!simple && <br />}
                   </div>
                 ),
                 imgUrl: hit.image,

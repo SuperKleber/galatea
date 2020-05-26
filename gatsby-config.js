@@ -16,7 +16,9 @@ const myQuery = `{
         category {
           title
         }
-        services
+        services{
+          title
+        }
         promo
         image{
           asset{
@@ -43,7 +45,7 @@ const queries = [
           title: node.title,
           description: node.description,
           category: node.category && node.category.map((c) => c.title),
-          services: node.services && node.services.map((s) => s),
+          services: node.services && node.services.map((s) => s.title),
           brand: node.brand && node.brand.title,
           doc: node.doc && node.doc.asset && node.doc.asset.url,
           image: node.image && node.image.asset && node.image.asset.url,

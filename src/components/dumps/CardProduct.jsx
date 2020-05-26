@@ -40,19 +40,6 @@ const CardProduct = (props) => {
             </span>
           );
         })}
-        {data.services.length !== 0 && (
-          <>
-            <hr />
-            <h6>Servicios:</h6>
-            {data.services.map((title, i) => {
-              return (
-                <span key={i} className="badge badge-info m-1">
-                  {title}
-                </span>
-              );
-            })}
-          </>
-        )}
 
         <br />
         <br />

@@ -21,7 +21,9 @@ const HandleProducts = ({ search, novedad }) => {
             category {
               title
             }
-            services
+            services {
+              title
+            }
             promo
             doc {
               asset {
@@ -48,6 +50,7 @@ const HandleProducts = ({ search, novedad }) => {
       {!novedad && (
         <>
           <SearchApp defaultSearch={search}></SearchApp>
+          <Sections></Sections>
           <hr />
         </>
       )}
