@@ -28,7 +28,7 @@ export class index extends Component {
   render() {
     return (
       <Layout
-        active="index"
+        active="inicio"
         title="Galatea"
         dataComponents={data.components}
         generalInformation={data.generalInformation}

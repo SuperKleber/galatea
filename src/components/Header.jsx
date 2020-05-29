@@ -40,7 +40,10 @@ export default class Header extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link to="/" className={`nav-link`}>
+                <Link
+                  to="/"
+                  className={`nav-link ${active == "inicio" && "active"}`}
+                >
                   INICIO
                 </Link>
               </li>
@@ -52,14 +55,14 @@ export default class Header extends Component {
                   PRODUCTOS
                 </Link>
               </li>
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <Link
-                  to="/products"
-                  className={`nav-link ${active == "products" && "active"}`}
+                  to="/servicios"
+                  className={`nav-link ${active == "servicios" && "active"}`}
                 >
                   SERVICIOS
                 </Link>
-              </li> */}
+              </li>
 
               <li className="nav-item">
                 <Link
