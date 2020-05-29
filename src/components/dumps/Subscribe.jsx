@@ -49,7 +49,7 @@ export default function Subscribe(props) {
               placeholder="Nombre"
               type="text"
               defaultValue=""
-              name="FNAME"
+              name="NOMBRE"
               className="form-control"
               id="mce-FNAME"
             />
@@ -64,7 +64,7 @@ export default function Subscribe(props) {
               placeholder="Apellido"
               type="text"
               defaultValue=""
-              name="LNAME"
+              name="APELLIDO"
               className="form-control"
               id="mce-LNAME"
             />
@@ -80,7 +80,7 @@ export default function Subscribe(props) {
               type="text"
               defaultValue=""
               maxLength="70"
-              name="ADDRESS[addr1]"
+              name="DIRECCION"
               id="mce-ADDRESS-addr1"
               className="form-control"
             />
@@ -93,7 +93,7 @@ export default function Subscribe(props) {
             </label>
             <select
               placeholder="País"
-              name="ADDRESS[country]"
+              name="PAIS"
               id="mce-ADDRESS-country"
               className="form-control"
             >
@@ -401,7 +401,7 @@ export default function Subscribe(props) {
               placeholder="Mensaje"
               type="text"
               defaultValue=""
-              name="MESSAGE"
+              name="MENSAJE"
               className="form-control"
               id="mce-PUESTO"
             />
@@ -412,7 +412,9 @@ export default function Subscribe(props) {
             type="submit"
             id="mc-embedded-subscribe"
             className=" btn btn-success mb-2"
-          />
+          >
+            Enviar formulario
+          </button>
         </div>
       </form>
       <style jsx="true">{``}</style>

@@ -11,16 +11,15 @@ const FormNetlify = () => {
       hidden
     >
       <input type="hidden" name="form-name" value="contacto" hidden />
-      <input type="text" name="FNAME" />
-      <input type="text" name="LNAME" />
+      <input type="text" name="NOMBRE" />
+      <input type="text" name="APELLIDO" />
       <input type="email" name="EMAIL" />
-      <input type="text" name="ADDRESS[country]" />
-      <input type="text" name="ADDRESS[country]" />
-      <input type="text" name="ADDRESS[country]" />
+      <input type="text" name="DIRECCION" />
+      <input type="text" name="PAIS" />
       <input type="text" name="PHONE" />
       <input type="text" name="COMPANY" />
       <input type="text" name="PUESTO" />
-      <input type="text" name="MESSAGE" />
+      <input type="text" name="MENSAJE" />
     </form>
   );
 };
