@@ -407,9 +407,8 @@ export default function Subscribe(props) {
           </div>
         )}
         <div className="form-group  row pr-4 pl-4 p-md-0 mx-sm-3 mb-2 d-flex justify-content-center">
-          <input
+          <button
             type="submit"
-            defaultValue="Subscribe"
             id="mc-embedded-subscribe"
             className=" btn btn-success mb-2"
           />
