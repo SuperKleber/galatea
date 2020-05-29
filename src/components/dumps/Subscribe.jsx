@@ -21,11 +21,12 @@ export default function Subscribe(props) {
         className="form container justify-content-center align-items-center flex-column flex-md-row"
         action="/"
         method="post"
+        data-netlify="true"
+        netlify="true"
         id="mc-embedded-subscribe-form"
-        name="mc-embedded-subscribe-form"
-        target="_blank"
-        noValidate
+        name="contacto"
       >
+        <input type="hidden" name="form-name" value="contacto" hidden />
         <div className="form-group row pr-4 pl-4 p-md-0 mx-sm-3 mb-2 d-flex justify-content-center">
           <label htmlFor="inputEmail" className="mr-2 sr-only">
             Email
