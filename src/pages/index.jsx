@@ -4,6 +4,7 @@ import Sections from "../components/Sections";
 import data from "../../data/data.json";
 import Lamp from "../components/dumps/Lamp";
 import Carousel from "../components/Carousel";
+import FormNetlify from "../components/dumps/FormNetlify";
 
 // index.js es la página principal de todo el sitio web,
 // recomiendo siempre mantener limpio este código agregando
@@ -35,6 +36,7 @@ export class index extends Component {
       >
         <Carousel></Carousel>
         <Sections data={data.components.sections}></Sections>
+        <FormNetlify></FormNetlify>
       </Layout>
     );
   }
