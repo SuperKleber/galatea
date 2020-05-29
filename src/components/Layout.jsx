@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import { Helmet } from "react-helmet";
-
+import FormNetlify from "./dumps/FormNetlify";
 // Layout es el componente que hace de contenedor de todas las páginas, contiene el "head", el "header" y el "footer"
 
 // props:
@@ -70,7 +70,14 @@ export default class Layout extends Component {
             width: 100vw;
             overflow-x: hidden;
           }
+          .formNetlify {
+            display: none;
+          }
         `}</style>
+
+        <div className="formNetlify">
+          <FormNetlify></FormNetlify>
+        </div>
       </div>
     );
   }
