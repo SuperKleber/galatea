@@ -2,6 +2,7 @@ import React from "react";
 import Card from "./Card";
 import ButtonWhatsapp from "./ButtonWhatsapp";
 import ButtonEmail from "./ButtonEmail";
+import LimitText from "./LimitText";
 const CardProduct = (props) => {
   const data = props.data;
   return (
@@ -21,7 +22,7 @@ const CardProduct = (props) => {
       }
       data={{
         ...data,
-        description: data.description,
+        description: <LimitText text={data.description} />,
         imgUrl: data.image,
         docUrl: data.doc,
         email: data.email,

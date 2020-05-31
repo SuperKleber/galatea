@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import List from "./List";
 
 // Este es un componente reutilizable para hacer cards de Bootstrap,
 
@@ -16,10 +15,9 @@ import List from "./List";
 // decidí dejarlo así de momento
 
 export default function Card(props) {
-  const [toggleText, setToggleText] = useState(false);
   const { imgUrl, title, description, tag } = props.data;
   const { horizontal, width, height, button, className } = props;
-  const limitText = 200;
+
   return (
     <div className={`card mt-4 ${className}`} style={props.style}>
       {tag && <div className="tag">{tag}</div>}
@@ -44,37 +42,7 @@ export default function Card(props) {
             className="card-body d-flex flex-column justify-content-between"
           >
             {title && <h6 className={`card-title`}>{title}</h6>}
-            {description && (
-              <div className="card-text">
-                {description.length > limitText ? (
-                  <>
-                    {toggleText
-                      ? description
-                      : `${description.substr(0, limitText)}`}
-                    {!toggleText && (
-                      <div
-                        onClick={() => setToggleText(true)}
-                        className="stretched-link  text-info"
-                        style={{ cursor: "pointer" }}
-                      >
-                        ...ver más
-                      </div>
-                    )}
-                    {toggleText && (
-                      <div
-                        onClick={() => setToggleText(false)}
-                        className="stretched-link  text-info"
-                        style={{ cursor: "pointer" }}
-                      >
-                        ver menos
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  description
-                )}
-              </div>
-            )}
+            {description && <div className="card-text">{description}</div>}
             {/* {docUrl ? (
           <a target="_blank" href={docUrl} className={`btn btn-primary`}>
             Descargar Info

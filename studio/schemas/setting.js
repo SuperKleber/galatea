@@ -18,19 +18,5 @@ export default {
       type: "array",
       of: [{ type: "targetInfo" }],
     },
-    {
-      name: "carouselServices",
-      title: "Carrusel de Servicios",
-      description: "Banners de la página de servicios",
-      type: "array",
-      of: [{ type: "carousel" }],
-    },
-    {
-      name: "services",
-      title: "Servicios",
-      description: "Describa us servicios",
-      type: "array",
-      of: [{ type: "targetInfo" }],
-    },
   ],
 };

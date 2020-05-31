@@ -11,6 +11,7 @@ import {
 } from "react-instantsearch-dom";
 import Card from "./dumps/Card";
 import ButtonWhatsapp from "./dumps/ButtonWhatsapp";
+import LimitText from "./dumps/LimitText";
 
 let searchClient = algoliasearch("0000", "0000");
 try {
@@ -88,7 +89,7 @@ const SearchBox = ({
       {!simple && (
         <div className="mb-4">
           <div className="d-flex mb-1 flex-wrap">
-            <div className="dropdown  mr-2">
+            {/* <div className="dropdown  mr-2">
               <button
                 className="btn btn-light dropdown-toggle"
                 type="button"
@@ -123,7 +124,7 @@ const SearchBox = ({
                   );
                 })}
               </div>
-            </div>
+            </div> */}
 
             <div className="dropdown mr-2">
               <button
@@ -150,20 +151,43 @@ const SearchBox = ({
                 })}
               </div>
             </div>
-          </div>
 
-          {targetInfo.map(({ title }, i) => {
-            return (
-              <button
-                key={i}
-                onClick={() => change(title)}
-                className="btn btn-success mr-2"
-                type="button"
-              >
-                {title}
-              </button>
-            );
-          })}
+            {sections.map(({ node }, i) => {
+              return (
+                <div className="dropdown mb-2 mr-2" key={i}>
+                  <button
+                    key={i}
+                    id={node.title}
+                    className="btn btn-success dropdown-toggle "
+                    type="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    {node.title}
+                  </button>
+                  <div className="dropdown-menu" aria-labelledby={node.title}>
+                    <button
+                      className="dropdown-item"
+                      onClick={() => change(node.title)}
+                    >
+                      {node.title}
+                    </button>
+                    <div className="dropdown-divider"></div>
+                    {node.categories.map(({ title }, i) => (
+                      <button
+                        key={i}
+                        onClick={() => change(title)}
+                        className="dropdown-item"
+                      >
+                        {title}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       )}
       <div className="input-group ">
@@ -217,43 +241,33 @@ const Hits = ({ hits, simple, filter = true }) => {
               data={{
                 ...hit,
                 title: <Highlight hit={hit} attribute="title" />,
-                description: (
-                  <div className="">
-                    {!simple && (
-                      <div>
-                        <Highlight hit={hit} attribute="description" />
-                        <br />
-                      </div>
-                    )}
-                    {hit.brand && (
-                      <>
-                        <div>
-                          {!simple && <h6>Marca:</h6>}
-                          <span className="badge badge-warning">
-                            <Highlight hit={hit} attribute="brand" />
-                          </span>
-                        </div>
-                      </>
-                    )}
-                    {hit.category.length !== 0 && (
-                      <>
-                        {!simple && <hr />}
-                        <div className="Category">
-                          {!simple && <h6>Categorías:</h6>}
-
-                          <Highlight
-                            className=""
-                            hit={hit}
-                            attribute="category"
-                          />
-                        </div>
-                      </>
-                    )}
-                  </div>
-                ),
+                description: <LimitText text={hit.description} />,
                 imgUrl: hit.image,
               }}
-            ></Card>
+            >
+              <div className="">
+                {hit.brand && (
+                  <>
+                    <div>
+                      {!simple && <h6>Marca:</h6>}
+                      <span className="badge badge-warning">
+                        <Highlight hit={hit} attribute="brand" />
+                      </span>
+                    </div>
+                  </>
+                )}
+                {hit.category.length !== 0 && (
+                  <>
+                    {!simple && <hr />}
+                    <div className="Category">
+                      {!simple && <h6>Categorías:</h6>}
+
+                      <Highlight className="" hit={hit} attribute="category" />
+                    </div>
+                  </>
+                )}
+              </div>
+            </Card>
           );
         })}
       </div>
