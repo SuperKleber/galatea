@@ -18,7 +18,7 @@ const LimitText = ({ text = "" }) => {
           {!toggleText && (
             <div
               onClick={() => setToggleText(true)}
-              className="stretched-link  text-info"
+              className="text-info"
               style={{ cursor: "pointer" }}
             >
               ...ver más
@@ -27,7 +27,7 @@ const LimitText = ({ text = "" }) => {
           {toggleText && (
             <div
               onClick={() => setToggleText(false)}
-              className="stretched-link  text-info"
+              className="text-info"
               style={{ cursor: "pointer" }}
             >
               ver menos
